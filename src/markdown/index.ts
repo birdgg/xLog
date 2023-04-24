@@ -44,6 +44,7 @@ import { rehypeExternalLink } from "./rehyper-external-link"
 import { remarkCallout } from "./remark-callout"
 import { remarkMermaid } from "./remark-mermaid"
 import { remarkPangu } from "./remark-pangu"
+import { remarkTwitter } from "./remark-twtter"
 import { remarkYoutube } from "./remark-youtube"
 import sanitizeScheme from "./sanitize-schema"
 
@@ -115,6 +116,7 @@ export const renderPageContent = (
       .use(remarkCallout)
       .use(remarkDirective)
       .use(remarkDirectiveRehype)
+      .use(remarkTwitter)
       .use(remarkYoutube)
       .use(remarkMermaid)
       .use(remarkMath, {
